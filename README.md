@@ -51,6 +51,7 @@ It is a strong portfolio project because it demonstrates both visual design and 
 - Review moderation through admin actions
 - Contact form with database storage and email sending
 - PostgreSQL integration with PDO
+- Role-based admin access via the users table
 
 ## Tech stack
 
@@ -92,6 +93,7 @@ It is a strong portfolio project because it demonstrates both visual design and 
 3. Import the SQL from [database/database_schema.sql](database/database_schema.sql).
 4. Update the values in [inc/config.php](inc/config.php) with your local database and mail settings.
 5. Start a local PHP server and open the project in your browser.
+6. To access the admin area, create a user account and set that user’s role to `admin` in the database.
 
 ## GitHub and portfolio notes
 
