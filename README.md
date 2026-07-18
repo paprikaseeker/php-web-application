@@ -2,42 +2,43 @@
 
 ## Overview
 
-This project is a PHP-based brewery website for Sea Of Black. It combines a modern landing page experience with backend functionality such as authentication, reviews, contact form handling, and an admin workflow.
+This project is a PHP-based brewery website for Sea Of Black. It combines a polished front-end experience with backend features such as authentication, reviews, contact handling, password reset, and an admin workflow.
 
-It is designed as a full-stack-style demo project that shows how front-end pages can connect to a PostgreSQL database and dynamic PHP logic.
+It is a strong portfolio project because it demonstrates both visual design and practical server-side development with PHP, PostgreSQL, sessions, forms, and database interaction.
 
-## What is inside the project
+## What is included
 
 ### Main pages
-- `index.php` — homepage with branding, hero content, and navigation
-- `story.php` — brewery story page
-- `beers.php` — beer/product listing page
-- `shop.php` — shop-style page for showcasing items
-- `contact.php` — contact page with a working form
-- `reviews.php` — review page with rating and review submission UI
-- `login.php` — login form
-- `register.php` — registration form
-- `restorepass.php` — password reset flow
-- `account.php` — user account area
-- `admin.php` — admin dashboard
+- [index.php](index.php) — homepage with branding, hero content, and navigation
+- [story.php](story.php) — brewery story page
+- [beers.php](beers.php) — beer/product listing page
+- [shop.php](shop.php) — shop-style page for showcasing items
+- [contact.php](contact.php) — contact page with a working form
+- [reviews.php](reviews.php) — review submission and display page
+- [login.php](login.php) — login form
+- [register.php](register.php) — registration form
+- [restorepass.php](restorepass.php) — password reset flow
+- [account.php](account.php) — user account area
+- [admin.php](admin.php) — admin dashboard
 
 ### Backend logic
-- `inc/config.php` — database and mail configuration
-- `inc/databaselogin.php` — main database logic and business logic class
-- `inc/auth_helper.php` — login/session helper functions
-- `inc/security.php` — CSRF and rate limiting helpers
-- `inc/handle_auth.php` — authentication endpoint
-- `inc/contact_handler.php` — contact form handler
-- `inc/submit_review.php` — review submission handler
-- `inc/admin_actions.php` — admin review and beer management actions
+- [inc/config.php](inc/config.php) — database and mail configuration
+- [inc/databaselogin.php](inc/databaselogin.php) — core database and authentication logic
+- [inc/auth_helper.php](inc/auth_helper.php) — login/session helper functions
+- [inc/security.php](inc/security.php) — CSRF and security helpers
+- [inc/handle_auth.php](inc/handle_auth.php) — authentication endpoint
+- [inc/contact_handler.php](inc/contact_handler.php) — contact form handler
+- [inc/submit_review.php](inc/submit_review.php) — review submission handler
+- [inc/admin_actions.php](inc/admin_actions.php) — admin review and beer management actions
 
 ### Frontend assets
-- `css/` — page-specific stylesheets
-- `js/` — JavaScript for login, logout, registration, and reviews
-- `images/` — site visuals, product images, and review images
+- [css](css) — page-specific stylesheets
+- [cssbootstrap](cssbootstrap) — Bootstrap CSS assets
+- [js](js) — JavaScript for login, logout, registration, reviews, and UI interactions
+- [images](images) — site visuals, product images, and review images
 
 ### Database
-- `database/database_schema.sql` — PostgreSQL schema and sample data
+- [database/database_schema.sql](database/database_schema.sql) — PostgreSQL schema and sample data
 
 ## Features
 
@@ -76,17 +77,9 @@ It is designed as a full-stack-style demo project that shows how front-end pages
 ├── account.php
 ├── admin.php
 ├── inc/
-│   ├── config.php
-│   ├── databaselogin.php
-│   ├── auth_helper.php
-│   ├── security.php
-│   ├── handle_auth.php
-│   ├── contact_handler.php
-│   ├── submit_review.php
-│   ├── admin_actions.php
-│   └── header.php
-├── js/
 ├── css/
+├── cssbootstrap/
+├── js/
 ├── images/
 ├── database/
 └── vendor/
@@ -96,16 +89,16 @@ It is designed as a full-stack-style demo project that shows how front-end pages
 
 1. Make sure PHP and PostgreSQL are installed and running.
 2. Create a PostgreSQL database.
-3. Import the SQL from `database/database_schema.sql`.
-4. Update the values in `inc/config.php` with your local database and mail settings.
+3. Import the SQL from [database/database_schema.sql](database/database_schema.sql).
+4. Update the values in [inc/config.php](inc/config.php) with your local database and mail settings.
 5. Start a local PHP server and open the project in your browser.
 
-## Notes for portfolio use
+## GitHub and portfolio notes
 
-- The project is a good example of a practical PHP web app with real database interaction.
-- It shows both front-end design and backend logic.
-- The code is suitable for explaining CRUD-style workflows, authentication, form handling, and simple admin tools.
-- Before sharing publicly, replace any real credentials and sensitive local configuration values with placeholders.
+- This repository is intended for portfolio use and demonstration of practical PHP web development.
+- Keep local secrets out of the repository. Use a local [.env](.env) file and do not commit it.
+- The project is ready to showcase as a full-featured PHP web app with real database-driven behavior.
+- If you want to make it even stronger for portfolio purposes, adding screenshots, a short demo video, and a feature summary would help.
 
 ## Summary
 
