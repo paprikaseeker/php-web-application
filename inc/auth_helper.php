@@ -35,6 +35,13 @@ function isUserLoggedIn() {
 }
 
 /**
+ * Check if the current user has admin privileges
+ */
+function isUserAdmin() {
+    return isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin';
+}
+
+/**
  * Sanitize user input
  */
 function sanitizeInput($input) {
