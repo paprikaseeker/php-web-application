@@ -45,7 +45,7 @@ class Database {
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
             
             // Insert user into database
-            $stmt = $this->conn->prepare("INSERT INTO users (firstname, lastname, email, password, phonenumber, country, city, postal, address) VALUES (:firstName, :lastName, :email, :password, :phoneNumber, :country, :city, :postal, :address)");
+             $stmt = $this->conn->prepare("INSERT INTO users (firstname, lastname, email, password, phonenumber, country, city, postal, address, role) VALUES (:firstName, :lastName, :email, :password, :phoneNumber, :country, :city, :postal, :address, :role)");
             
             $stmt->execute([
                 ':firstName' => $firstName,
@@ -56,7 +56,8 @@ class Database {
                 ':country' => $country,
                 ':city' => $city,
                 ':postal' => $postal,
-                ':address' => $address
+                ':address' => $address,
+                ':role' => 'user'
             ]);
             
             return ["success" => true, "message" => "Registration successful! You can now login."];
@@ -89,7 +90,7 @@ class Database {
 
         try {
             // Check if user exists
-            $stmt = $this->conn->prepare("SELECT id, firstname, email, password FROM users WHERE email = :email");
+            $stmt = $this->conn->prepare("SELECT id, firstname, email, password, role FROM users WHERE email = :email");
             $stmt->execute([':email' => $email]);
 
             if ($stmt->rowCount() === 0) {
@@ -115,12 +116,13 @@ class Database {
             // Set session variables
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['firstname'];
+            $_SESSION['user_role'] = $user['role'] ?? 'user';
             $_SESSION['logged_in'] = true;
 
             // Regenerate session ID for security
             session_regenerate_id(true);
 
-            $redirect = ($user['email'] === 'adminlogs@example.com') ? 'admin.php' : 'index.php';
+            $redirect = ($_SESSION['user_role'] === 'admin') ? 'admin.php' : 'index.php';
 
             return ["success" => true, "message" => "Login successful!", "redirect" => $redirect];
         } catch (PDOException $e) {
@@ -456,7 +458,7 @@ class Database {
      */
     public function getUserData($userId) {
         try {
-            $stmt = $this->conn->prepare("SELECT * FROM users WHERE id = :id");
+            $stmt = $this->conn->prepare("SELECT id, firstname, lastname, email, password, role FROM users WHERE id = :id");
             $stmt->execute([':id' => $userId]);
             
             return $stmt->fetch();
