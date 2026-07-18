@@ -1,0 +1,211 @@
+.container-contact{
+  display: grid;
+}
+
+.container-contact h3{
+  font-family: 'Nova Square', sans-serif;
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color:white;
+  font-size:25px;
+margin-top: 20px;
+margin-left: 35%;
+margin-right: 35%;
+margin-bottom: 0px;
+}
+
+.facebook-button h3{
+  font-size: 30px;
+}
+
+.social-media-box-instagram h3{
+  font-size: 30px;
+}
+
+.containter-text-p p{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.container-contact-us{
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+}
+
+.container-contact-us .fa{
+
+  font-size: 44px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #B77724;
+    transition: all 0.2s;
+}
+
+.facebook-button{
+  border: none;
+  background-color: rgba(0,0,0,0);
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  height:198px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.instagram-button{
+  border: none;
+  background-color: rgba(0,0,0,0);
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  height:200px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+.container-contact-us .facebook-button .fa:hover{
+    color: #fff;
+}
+
+.facebook-button:hover {
+	background-color: #080605;
+}
+
+.social-media-box-facebook .fa:hover {
+  color: white;
+}
+
+.social-media-box-instagram:hover {
+	background-color: #080605;
+}
+
+.social-media-box-instagram .fa:hover {
+  color: white;
+}
+
+.social-media-box-facebook{
+  display:inline-block;
+  height:200px;
+  width:auto;
+  border-color: none;
+  text-align: center;
+}
+
+.container-form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container-form form {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+.container-form button[type="submit"] {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.social-media-box-instagram{
+  display:inline-block;
+  height:200px;
+  border-color: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.social-media-line{
+  background-color: #362b23; 
+  height:200px;
+}
+
+.container-form {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+ input[type=text], input[type=email] {
+    font-family: 'Miriam Libre', sans-serif;
+    width: 100%;
+    padding: 7px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    color:#B77724;
+    font-weight: bold; 
+}
+
+.container-form label {
+    color: white;
+    font-family: 'Miriam Libre', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.review-box{
+    padding: 7px;
+    font-family: 'Miriam Libre', sans-serif;
+    height: 150px;
+    vertical-align: top;
+    width: 100%;
+    resize: none;
+    border: none;
+    background: #f1f1f1;
+    margin: 5px 0 22px 0;
+    color:#B77724;
+    font-weight: bold; 
+}
+
+ input[type=review] {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+nput[type=text]::placeholder,
+.review-box::placeholder {
+    color: #794e1771;
+}
+
+/* When the inputs get focus, do something */
+input[type=text]:focus, input[type=review]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: #B77724;
+  color: black;
+  font-weight: bold;
+  font-size:20px;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 35%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #B77724;
+}

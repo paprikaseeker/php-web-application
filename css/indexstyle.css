@@ -1,0 +1,167 @@
+.youtube-video{
+	display:flex;
+	justify-content: center;
+	width:100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+h5{
+	font-family: 'Miriam Libre', sans-serif;
+	font-size: 50px;
+}
+
+p{
+	font-family: 'Miriam Libre', sans-serif;
+	color: rgb(156, 127, 127);
+	font-size: 20px;
+}
+
+.container0{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #5f2e1a;
+}
+
+.main-name{
+	text-align: center;
+	text-decoration: none;
+	height:400px;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-name h5{
+	margin-top:0px;
+	margin-bottom:10px;
+	background-image: linear-gradient(#B77724, #5f2e1a);
+}
+
+.main-name a{
+	text-decoration: none;
+	margin-bottom:10px;
+}
+
+.main-name p{
+	color: white;
+}
+
+.button-seaofblack{
+	font-family: 'Miriam Libre', sans-serif;
+	padding: 10px 15px;
+	width:120px;
+}
+
+.table-main{
+display: grid;
+}
+
+tr{
+	text-align: center;	
+}
+
+td p{
+	color: white;
+	font-size: 30px;
+}
+
+.container1{
+	display: grid;
+	background-color: #BBB3AF;
+	grid-template-columns: 1fr 42%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container1 h3{
+	font-family: 'Miriam Libre', sans-serif;
+	font-size: 40px;
+
+}
+.left0{
+	text-align: center;
+}
+
+.left0 h5{
+	margin-top: 0px;
+	background-image: linear-gradient(#5f2e1a, #B77724);
+	margin-bottom:0px;
+}
+
+.left0 p{
+	color: #393733;
+	text-align: center;
+	font-weight:bold;
+}
+
+.left0 a{
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.left0 .button-seaofblack{
+	margin-top:195px;
+}
+
+.right0 {
+	overflow: hidden;
+	display:flex;
+	flex-direction: column;
+	margin: 0;
+	padding-top: 15px;
+	background-color: rgba(20, 20, 18, 0.70);
+}
+
+.pics{
+	padding-top:28px;
+	align-self: center;
+}
+
+.right-text {
+	height: 25px;
+	margin-bottom: 30px;
+	align-self: center;
+}
+
+.right-text p{
+	color: #BBB3AF;
+	font-weight:bold;
+}
+
+/*responsive*/
+
+@media(max-width: 950px){
+
+	.container0{
+	display: block;
+	}
+
+	.main-name{
+		height:3%;
+	}
+
+	.table0{
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.table0 tr{
+		height: 150px;
+	}
+
+	.container1{
+	display: block;
+	}
+
+}
+
+@media(max-width: 470px) {
+	.right0 {
+		display:block;
+}
+}

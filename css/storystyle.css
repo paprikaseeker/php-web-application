@@ -1,0 +1,73 @@
+h5{
+    margin: 0;
+    font-size: 50px;
+    color:white;
+    font-family: 'Arya', sans-serif;
+    background-color: #B77724;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: #B77724;
+    font-family: 'Miriam Libre', sans-serif;
+    line-height: 30px;
+    height: 230px;
+}
+
+.block-story-left{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(77, 61, 50);
+}
+
+
+.pic-description{
+width:auto;
+}
+
+.pic-left{
+    background-color:white;
+    margin: 50px 70px;
+    padding: 5px;
+    width: 400px;
+    height: 249.13px;
+    transform: rotate(-6deg);
+}
+
+.picture-left{
+    width:400px;
+    padding-left: 5;
+}
+
+/*responsive*/
+
+@media(max-width: 970px) {
+    h5 {
+        font-size: 40px;
+    }
+
+    .block-story-left {
+        display: block;
+        height: auto;
+    }
+
+    .pic-left {
+        transform: rotate(0deg);
+        background-color: transparent;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .picture-left{
+    width:100%;
+    padding:0;
+    }
+
+    p {
+        height:auto;
+    }
+}
