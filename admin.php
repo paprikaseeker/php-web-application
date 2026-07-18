@@ -9,11 +9,7 @@ if (!isUserLoggedIn()) {
 }
 
 // Check if admin
-$userEmail = ''; // Need to get user email
-// Since we don't have email in session, need to fetch from DB
-$userId = getCurrentUserId();
-$userData = $db->getUserData($userId);
-if (!$userData || $userData['email'] !== 'adminlogs@example.com') {
+if (!isUserAdmin()) {
     header("Location: index.php");
     exit;
 }
