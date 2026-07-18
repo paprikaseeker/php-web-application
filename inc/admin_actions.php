@@ -10,9 +10,7 @@ if (!isUserLoggedIn()) {
     exit;
 }
 
-$currentUserId = getCurrentUserId();
-$currentUser = $db->getUserData($currentUserId);
-if (!$currentUser || $currentUser['email'] !== 'adminlogs@example.com') {
+if (!isUserAdmin()) {
     echo json_encode(["success" => false, "message" => "Unauthorized access."]);
     exit;
 }
