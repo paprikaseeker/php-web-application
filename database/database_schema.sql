@@ -14,11 +14,14 @@ CREATE TABLE IF NOT EXISTS users (
     city VARCHAR(100),
     postal VARCHAR(20),
     address TEXT,
+    role VARCHAR(20) NOT NULL DEFAULT 'user',
     reset_token VARCHAR(255) NULL,
     reset_token_expiry TIMESTAMP NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+ALTER TABLE users ADD COLUMN IF NOT EXISTS role VARCHAR(20) NOT NULL DEFAULT 'user';
 
 -- Create indexes for performance
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
